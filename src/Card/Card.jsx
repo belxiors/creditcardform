@@ -6,7 +6,7 @@ const Card = ({ cardNumber, cardName, cardMonth, cardYear, cardCVV }) => (
     <div className="card-number">{cardNumber || '################'}</div>
     <div className="card-holder">{cardName || 'FULL NAME'}</div>
     <div className="card-expires">
-      {`${cardMonth || 'MM'}/${cardYear || 'YY'}`}
+      {`${cardMonth || 'MM'}/${cardYear.slice(2) || 'YY'}`}
     </div>
     <div className="card-cvv">{cardCVV}</div>
   </div>
