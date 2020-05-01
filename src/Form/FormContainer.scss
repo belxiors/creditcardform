@@ -1,0 +1,38 @@
+.form-container {
+  height: 40%;
+  display: flex;
+  flex: 0 1 40%;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    display: grid;
+    height: 80%;
+    width: 80%;
+  }
+
+  .layout-1-1-4 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+
+  .layout-2-1-4 {
+    grid-column: 1/4;
+    grid-row: 2/3;
+  }
+
+  .layout-3-1-2 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .layout-3-2-3 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  .layout-3-3-4 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+}
