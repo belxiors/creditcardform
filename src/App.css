@@ -12,6 +12,7 @@ body,
   height: 100%;
   display: flex;
   flex: 0 1 100%;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

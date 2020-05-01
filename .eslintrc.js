@@ -19,5 +19,7 @@ module.exports = {
   rules: {
     'prefer-arrow-callback': 'off',
     'object-curly-newline': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'arrow-parens': 'off',
   },
 };
