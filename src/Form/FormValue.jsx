@@ -4,7 +4,7 @@ import './FormValue.scss';
 
 const FormValue = ({ labelText, inputType, placeholder, className }) => (
   <div className={`form-value ${className}`}>
-    <label>{labelText}</label>
+    <label htmlFor="form-input">{labelText}</label>
     <input className="form-input" type={inputType} placeholder={placeholder} />
   </div>
 );

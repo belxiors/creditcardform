@@ -4,8 +4,8 @@ import './Select.scss';
 
 const Select = ({ className, labelText, placeholder, options }) => (
   <div className={`select ${className}`}>
-    <label>{labelText}</label>
-    <select placeholder={placeholder}>
+    <label htmlFor="selector">{labelText}</label>
+    <select className="selector" placeholder={placeholder}>
       {options.map(function mapOptions(value) {
         return (
           <option key={value} value={value}>
