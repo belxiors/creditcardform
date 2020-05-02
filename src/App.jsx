@@ -3,6 +3,15 @@ import './App.css';
 import FormContainer from './Form/FormContainer';
 import Card from './Card/Card';
 
+function noMoreThan(n, fn) {
+  return function setLiterals(literals) {
+    if (literals.length <= n) {
+      return fn(literals);
+    }
+    return undefined;
+  };
+}
+
 const App = () => {
   const [cardName, setCardName] = useState();
   const [cardNumber, setCardNumber] = useState();
@@ -12,10 +21,10 @@ const App = () => {
   const cardData = { cardName, cardNumber, cardMonth, cardYear, cardCVV };
   const cardSetters = {
     setCardName,
-    setCardNumber,
+    setCardNumber: noMoreThan(12, setCardNumber),
     setCardMonth,
     setCardYear,
-    setCardCVV,
+    setCardCVV: noMoreThan(3, setCardCVV),
   };
   return (
     <div className="app">

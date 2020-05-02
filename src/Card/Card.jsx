@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Card.scss';
 
 const Card = ({ cardNumber, cardName, cardMonth, cardYear, cardCVV }) => (
-  <div>
+  <div className="card-container">
     <div className="card-number">{cardNumber || '################'}</div>
     <div className="card-holder">{cardName || 'FULL NAME'}</div>
     <div className="card-expires">
